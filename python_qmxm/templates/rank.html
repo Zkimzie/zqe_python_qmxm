@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head><script src="/static/echarts.min.js"></script>
+{% extends "base.html" %}
+
+{% block title %}幸福感{% endblock %}
+
+{% block page_content %}
+
+    <table class="table table-bordered">
+    <tr>
+        <th>country</th>
+        <th>rank_2015</th>
+        <th>rank_2016</th>
+        <th>rank_2017</th>
+
+    </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+
+            </tr>
+    {% endfor %}
+    </table>
+{{ the_plot_all1|safe }}
+    {{ the_plot_all2|safe }}
+    <p><strong>结论：</strong><br>
+1. 瑞士、冰岛、丹麦、挪威、加拿大、荷兰、瑞典、新西兰、澳大利亚这些国家的幸福指数排名，在2015年至2017年间均在前十名间徘徊，未掉出过前十。<br>
+2.多哥、布隆迪共和国、叙利亚、贝宁共和国、卢旺达、阿富汗、布基纳法索等国家的幸福指数排名较低。<br>
+3.猜想：世界幸福指数的排名与国家的稳定程度有关，从上可以看出幸福指数较前的国家国局均处于安定的状态，而排名低下的国家国局大多不稳定并且有的还处于战乱之中。</p>
+<input type="button" value="下一页" onclick="window.location.href='/score'" />
+{% endblock %}
+
+
+</html>

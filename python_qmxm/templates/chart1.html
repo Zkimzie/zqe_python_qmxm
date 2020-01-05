@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/themes/westeros.js"></script>
+
+    
+</head>
+<body>
+        <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: none;
+            padding: 6px 12px;
+            border-top: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, 'c5064bbbbd554cd3bfe473ee99f59972')">2015年前二十排名</button>
+            <button class="tablinks" onclick="showChart(event, '4d27d288d90449aeb15aa6b28e8e1360')">2016年前二十排名</button>
+            <button class="tablinks" onclick="showChart(event, 'e209646419a34b1ab7467fc2b097b901')">2017年前二十排名</button>
+    </div>
+
+    <div class="box">
+                <div id="c5064bbbbd554cd3bfe473ee99f59972" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_c5064bbbbd554cd3bfe473ee99f59972 = echarts.init(
+            document.getElementById('c5064bbbbd554cd3bfe473ee99f59972'), 'westeros', {renderer: 'canvas'});
+        var option_c5064bbbbd554cd3bfe473ee99f59972 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "2015\u5e74\u6392\u540d",
+            "data": [
+                1.0,
+                2.0,
+                3.0,
+                4.0,
+                5.0,
+                6.0,
+                7.0,
+                8.0,
+                9.0,
+                10.0,
+                11.0,
+                12.0,
+                13.0,
+                14.0,
+                15.0,
+                16.0,
+                17.0,
+                18.0,
+                19.0,
+                20.0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2015\u5e74\u6392\u540d"
+            ],
+            "selected": {
+                "2015\u5e74\u6392\u540d": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "Switzerland",
+                "Iceland",
+                "Denmark",
+                "Norway",
+                "Canada",
+                "Finland",
+                "Netherlands",
+                "Sweden",
+                "New Zealand",
+                "Australia",
+                "Israel",
+                "Costa Rica",
+                "Austria",
+                "Mexico",
+                "United States",
+                "Brazil",
+                "Luxembourg",
+                "Ireland",
+                "Belgium",
+                "United Arab Emirates"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "2015\u5e74\u4e16\u754c\u5e78\u798f\u6307\u6570\u5728\u524d\u4e8c\u5341\u7684\u56fd\u5bb6"
+        }
+    ]
+};
+        chart_c5064bbbbd554cd3bfe473ee99f59972.setOption(option_c5064bbbbd554cd3bfe473ee99f59972);
+    </script>
+                <div id="4d27d288d90449aeb15aa6b28e8e1360" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_4d27d288d90449aeb15aa6b28e8e1360 = echarts.init(
+            document.getElementById('4d27d288d90449aeb15aa6b28e8e1360'), 'westeros', {renderer: 'canvas'});
+        var option_4d27d288d90449aeb15aa6b28e8e1360 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "2016\u5e74\u6392\u540d",
+            "data": [
+                2.0,
+                3.0,
+                1.0,
+                4.0,
+                6.0,
+                5.0,
+                7.0,
+                10.0,
+                8.0,
+                9.0,
+                11.0,
+                14.0,
+                12.0,
+                21.0,
+                13.0,
+                17.0,
+                20.0,
+                19.0,
+                18.0,
+                28.0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2016\u5e74\u6392\u540d"
+            ],
+            "selected": {
+                "2016\u5e74\u6392\u540d": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "Switzerland",
+                "Iceland",
+                "Denmark",
+                "Norway",
+                "Canada",
+                "Finland",
+                "Netherlands",
+                "Sweden",
+                "New Zealand",
+                "Australia",
+                "Israel",
+                "Costa Rica",
+                "Austria",
+                "Mexico",
+                "United States",
+                "Brazil",
+                "Luxembourg",
+                "Ireland",
+                "Belgium",
+                "United Arab Emirates"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "2016\u5e74\u4e16\u754c\u5e78\u798f\u6307\u6570\u5728\u524d\u4e8c\u5341\u7684\u56fd\u5bb6"
+        }
+    ]
+};
+        chart_4d27d288d90449aeb15aa6b28e8e1360.setOption(option_4d27d288d90449aeb15aa6b28e8e1360);
+    </script>
+                <div id="e209646419a34b1ab7467fc2b097b901" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_e209646419a34b1ab7467fc2b097b901 = echarts.init(
+            document.getElementById('e209646419a34b1ab7467fc2b097b901'), 'westeros', {renderer: 'canvas'});
+        var option_e209646419a34b1ab7467fc2b097b901 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "2017\u5e74\u6392\u540d",
+            "data": [
+                4.0,
+                3.0,
+                2.0,
+                1.0,
+                7.0,
+                5.0,
+                6.0,
+                9.0,
+                8.0,
+                9.0,
+                11.0,
+                12.0,
+                13.0,
+                25.0,
+                14.0,
+                22.0,
+                18.0,
+                15.0,
+                17.0,
+                21.0
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "2017\u5e74\u6392\u540d"
+            ],
+            "selected": {
+                "2017\u5e74\u6392\u540d": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                "Switzerland",
+                "Iceland",
+                "Denmark",
+                "Norway",
+                "Canada",
+                "Finland",
+                "Netherlands",
+                "Sweden",
+                "New Zealand",
+                "Australia",
+                "Israel",
+                "Costa Rica",
+                "Austria",
+                "Mexico",
+                "United States",
+                "Brazil",
+                "Luxembourg",
+                "Ireland",
+                "Belgium",
+                "United Arab Emirates"
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "2017\u5e74\u4e16\u754c\u5e78\u798f\u6307\u6570\u5728\u524d\u4e8c\u5341\u7684\u56fd\u5bb6"
+        }
+    ]
+};
+        chart_e209646419a34b1ab7467fc2b097b901.setOption(option_e209646419a34b1ab7467fc2b097b901);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

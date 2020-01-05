@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head><script src="/static/echarts.min.js"></script>
+{% extends "base.html" %}
+
+{% block title %}幸福感{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>country</th>
+        <th>differencrce</th>
+        <th>rank</th>
+
+
+    </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+
+
+            </tr>
+    {% endfor %}
+    </table>
+{{ the_plot_all|safe }}
+<p><strong>结论：</strong><br>
+1. 幸福感显著提高的国家（前二十）有：拉脱维亚共和国、罗马尼亚、多哥共和国、塞内加尔共和国、加蓬共和国、阿拉伯埃及共和国、科特迪瓦、匈牙利、保加利亚、叙利亚、尼泊尔、布基纳法索、喀麦隆共和国、洪都拉斯共和国、黎巴嫩、希腊、菲律宾、柬埔寨、多米尼加共和国、危地马拉。综上，较多出现的地区有东欧、西非、西亚。<br>
+2. 东欧地区经济多为发达，商业条件好，且最近有实施经济自由化政策。西非正在增强政策的合力，例如推行单一货币ECO等动作，以及维持关键利率不变这一操作，有适当的减缓大众的通货膨胀压力。西亚在15年间，处于剧烈动荡的高危险局面，后来中国对西亚的外交政策作出了一系列新调整，介入地区的热点问题解决，合力打击国际恐怖主义并加快一带一路的建设，在一定程度上促成了西亚在之后两年的局势稳定，从而提升其国家人民的幸福分数。</p>
+<input type="button" value="下一页" onclick="window.location.href='/GDP'" />
+{% endblock %}
+<body>
+
+</body>
+</html>

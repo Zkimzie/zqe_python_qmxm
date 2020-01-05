@@ -1,0 +1,36 @@
+<script src="/static/echarts.min.js"></script>
+{% extends "base.html" %}
+
+{% block title %}幸福感{% endblock %}
+
+{% block page_content %}
+    <form method="POST" action="/selection">
+    <select name="the_selected">
+        {% for item in all_item %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='Do it!' type='SUBMIT'></p>
+
+</form>
+
+    <table class="table table-bordered">
+    <tr>
+        {% for i in cols %}
+                <th>{{ i[0] }}</th>
+        {% endfor %}
+
+    </tr>
+        {% for i in data %}
+            <tr>
+                {% for j in range(cols|length) %}
+                    <td>{{ i[j] }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{{ the_plot_all|safe }}
+{{ the_plot_all1|safe }}
+    {{ the_plot_all2|safe }}
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head><script src="/static/echarts.min.js"></script>
+{% extends "base.html" %}
+
+{% block title %}幸福感{% endblock %}
+
+{% block page_content %}
+    <table class="table table-bordered">
+    <tr>
+        <th>country</th>
+        <th>score_2015</th>
+        <th>score_2016</th>
+        <th>score_2017</th>
+
+    </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+
+            </tr>
+    {% endfor %}
+    </table>
+{{ the_plot_all|safe }}
+<p><strong>结论：</strong><br>
+1. 世界幸福指数较高的国家基本都分布在北欧、北美洲、澳大利亚一带。<br>
+2. 世界幸福指数较低的国家则主要分布在非洲地区、西亚、欧洲东南部一带。<br>
+3. 较高的原因猜想：<br>
+    - 在商业与经济中处于富裕地位，比如瑞典、芬兰、丹麦都是工业制成品出口为导向的经济体，产品附加值极高，因此完全可以负担小国寡民情况下的高额福利。<br>
+    - 公民参与度高。据相关资料显示，北欧是全球廉洁程度最高的地区。据"透明国际"发布的"2014年全球清廉指数报告",北欧国家廉洁程度均名列前茅。其中,丹麦以92分居清廉指数世界第一,瑞典以87分排名第四。<br>
+4. 较低的原因猜想：<br>
+    - 与宗教问题有一定的相关性，东欧的位置正好是西方基督教和东方中亚，中东伊斯兰教的交汇处，尤其是奥斯曼不断推广伊斯兰教，基督教和伊斯兰教在此发生激烈的冲突和战争，使得在宗教影响下逐步改变了民族结构和宗教成分。同样的，非洲的宗教也有一些问题，据资料显示其宗教混乱繁多。<br>
+    - 与经济问题也有一定地相关性，在二战中，东欧基本都成了废墟，被打成了碎片。东欧被苏联掌控，都实行苏联的经济体制，使得前期还能运转正常的经济，到后来举步维艰。最后苏联解体，苏东剧变，很多国家经济几乎是推倒重来，比西欧整整又落后了半个世纪，导致了现在的巨大差异。</p>
+<input type="button" value="下一页" onclick="window.location.href='/difference'" />
+{% endblock %}
+<body>
+
+</body>
+</html>

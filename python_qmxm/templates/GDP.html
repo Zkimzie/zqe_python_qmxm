@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head><script src="/static/echarts.min.js"></script>
+{% extends "base.html" %}
+
+{% block title %}幸福感{% endblock %}
+
+{% block page_content %}
+
+    <table class="table table-bordered">
+    <tr>
+        <th>country</th>
+        <th>GDP_2015</th>
+        <th>GDP_2016</th>
+        <th>GDP_2017</th>
+        <th>rank_difference</th>
+
+    </tr>
+        {% for i in data %}
+            <tr>
+                <td>{{ i[0] }}</td>
+                <td>{{ i[1] }}</td>
+                <td>{{ i[2] }}</td>
+                <td>{{ i[3] }}</td>
+                <td>{{ i[4] }}</td>
+
+            </tr>
+    {% endfor %}
+    </table>
+{{ the_plot_all|safe }}
+<p><strong>结论：</strong><br>
+1. 由图可看出，若GDP与幸福分数关联度越高，其幸福分数排名也会有较大可能的概率会上升，但不是绝对的。<br>
+2. 原因分析：<br>
+    - 前十基本都在北欧一带，而由此图可以推测，北欧一带的幸福指数高，与gdp的关系脱不了干系。北欧的得天优厚的自然资源，它不仅有渔业，还有石油、天然气等珍贵资源，挪威也因为此地的资源被称为石油大国。当然还有丰富的煤矿、铁矿等资源，而且这里的人口稀少，人均gdp也会相对的上升较多。<br>
+    - 北欧会通过税收进行财富再分配，通过公平提供教育资源让穷人的孩子不被忽视，这样尽量做到公平平等。<br>
+    - 北欧国家十分重视教育，那里的孩子从小学到大学都是免费的。如果想要出国留学，也可以申请，表现不错的也都免费。发展的根本就是把教育抓上去，科技搞上去，而上述这些都做到了，自然而然生活在这里的人们幸福度就会高了。</p>
+<input type="button" value="下一页" onclick="window.location.href='/rank'" />
+{% endblock %}
+<body>
+
+</body>
+</html>
